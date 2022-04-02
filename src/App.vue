@@ -123,7 +123,7 @@ onMounted(() => {
 
     <!-- ATTRIBUTION -->
     <footer
-      class="text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4 mt-24"
+      class="text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4 mt-16"
     >
       <div>
         Challenge by
