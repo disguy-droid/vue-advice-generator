@@ -123,7 +123,7 @@ onMounted(() => {
 
     <!-- ATTRIBUTION -->
     <div
-      class="text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4 mt-24 md:mt-36"
+      class="absolute bottom-4 md:bottom-36 text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4"
     >
       <div>
         Challenge by
