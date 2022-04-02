@@ -44,6 +44,7 @@ onMounted(() => {
     class="min-h-screen bg-darkBlue flex flex-col justify-center items-center"
   >
     <main
+      role="main"
       class="relative w-[375px] md:w-[33.75rem] h-auto bg-darkGrayishBlue rounded-[14px] flex flex-col items-center py-12 px-2 md:px-10 shadow-2xl transition-all duration-300 ease-in-out"
     >
       <!-- ADVICE ID -->
@@ -122,7 +123,8 @@ onMounted(() => {
     </main>
 
     <!-- ATTRIBUTION -->
-    <div
+    <footer
+      role="contentinfo"
       class="absolute bottom-4 md:bottom-36 text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4"
     >
       <div>
@@ -143,7 +145,7 @@ onMounted(() => {
           >Monish</a
         >.
       </div>
-    </div>
+    </footer>
   </div>
 </template>
 
