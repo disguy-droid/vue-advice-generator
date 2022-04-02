@@ -55,13 +55,13 @@ onMounted(() => {
       </p>
 
       <!-- ADVICE -->
-      <p class="text-center mt-6">
+      <blockquote class="text-center mt-6">
         <q
           id="advice"
           class="font-manrope text-lightCyan text-[1.75rem] font-extrabold select-auto"
           >{{ randomAdvice.advice }}
         </q>
-      </p>
+      </blockquote>
 
       <!-- DIVIDER -->
       <svg
