@@ -1,34 +1,39 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, reactive, ref } from "vue";
 import axios from "axios";
 import anime from "animejs";
 
-const advice = ref(
-  "It is easy to sit up and take notice, what's difficult is getting up and taking action."
-);
-const adviceId = ref("117");
-
-function getAdvice() {
-  axios
-    .get("https://api.adviceslip.com/advice")
-    .then((res) => {
-      advice.value = res.data.slip.advice;
-      adviceId.value = res.data.slip.id;
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-}
+let randomAdvice = reactive({
+  advice:
+    "It is easy to sit up and take notice, what's difficult is getting up and taking action.",
+  adviceID: "117",
+  id: "",
+});
 
 onMounted(() => {
-  const btn = document.querySelector("#btn");
+  const API_URL = `https://api.adviceslip.com/advice/`;
 
+  // BUTTON ANIMATION
+  const btn = document.querySelector("#btn");
   btn.addEventListener("click", () => {
+    let index = Math.floor(Math.random() * 200);
+    randomAdvice.id = index;
+
+    axios
+      .get(`${API_URL}${randomAdvice.id}`)
+      .then((res) => {
+        randomAdvice.advice = res.data.slip.advice;
+        randomAdvice.adviceID = res.data.slip.id;
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+
     anime.remove(btn);
     anime({
       targets: btn,
       rotate: ["0", "360"],
-      scale: [0.9, 1],
+      scale: [0.8, 1],
     });
   });
 });
@@ -46,7 +51,7 @@ onMounted(() => {
         class="font-manrope font-bold text-neonGreen uppercase space-x-2 tracking-[0.24em] text-xs"
       >
         <span>Advice</span>
-        <span>#{{ adviceId }}</span>
+        <span>#{{ randomAdvice.adviceID }}</span>
       </div>
 
       <!-- ADVICE -->
@@ -54,7 +59,7 @@ onMounted(() => {
         <q
           id="advice"
           class="font-manrope text-lightCyan text-[1.75rem] font-extrabold select-auto"
-          >{{ advice }}
+          >{{ randomAdvice.advice }}
         </q>
       </div>
 
@@ -92,7 +97,6 @@ onMounted(() => {
 
       <!-- DICE -->
       <button
-        @click="getAdvice"
         id="btn"
         class="btn absolute -bottom-8 select-none group"
         aria-label="button"
@@ -120,7 +124,7 @@ onMounted(() => {
 
     <!-- ATTRIBUTION -->
     <div
-      class="mt-48 text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4"
+      class="absolute bottom-16 text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4"
     >
       <div>
         Challenge by
