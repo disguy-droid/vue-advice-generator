@@ -44,7 +44,6 @@ onMounted(() => {
     class="min-h-screen bg-darkBlue flex flex-col justify-center items-center"
   >
     <main
-      role="main"
       class="relative w-[375px] md:w-[33.75rem] h-auto bg-darkGrayishBlue rounded-[14px] flex flex-col items-center py-12 px-2 md:px-10 shadow-2xl transition-all duration-300 ease-in-out"
     >
       <!-- ADVICE ID -->
@@ -104,7 +103,7 @@ onMounted(() => {
         <span
           class="absolute inset-0 w-16 h-16 bg-neonGreen rounded-full group-hover:blur-lg transition-all duration-300 ease-in-out"
         ></span>
-        <div
+        <span
           class="bg-neonGreen relative w-16 h-16 flex justify-center items-center rounded-full"
         >
           <svg
@@ -118,14 +117,13 @@ onMounted(() => {
               fill="#202733"
             />
           </svg>
-        </div>
+        </span>
       </button>
     </main>
 
     <!-- ATTRIBUTION -->
     <footer
-      role="contentinfo"
-      class="absolute bottom-4 md:bottom-36 text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4"
+      class="absolute bottom-4 md:bottom-24 text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4"
     >
       <div>
         Challenge by
