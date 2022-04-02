@@ -43,57 +43,56 @@ onMounted(() => {
   <div
     class="min-h-screen bg-darkBlue flex flex-col justify-center items-center"
   >
-    <div
+    <main
       class="relative w-[375px] md:w-[33.75rem] h-auto bg-darkGrayishBlue rounded-[14px] flex flex-col items-center py-12 px-2 md:px-10 shadow-2xl transition-all duration-300 ease-in-out"
     >
       <!-- ADVICE ID -->
-      <div
+      <p
         class="font-manrope font-bold text-neonGreen uppercase space-x-2 tracking-[0.24em] text-xs"
       >
         <span>Advice</span>
         <span>#{{ randomAdvice.adviceID }}</span>
-      </div>
+      </p>
 
       <!-- ADVICE -->
-      <div class="text-center mt-9">
+      <p class="text-center mt-6">
         <q
           id="advice"
           class="font-manrope text-lightCyan text-[1.75rem] font-extrabold select-auto"
           >{{ randomAdvice.advice }}
         </q>
-      </div>
+      </p>
 
       <!-- DIVIDER -->
-      <div class="mt-12 mb-10">
-        <div class="inline md:hidden">
-          <svg
-            class=""
-            width="295"
-            height="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g fill="none" fill-rule="evenodd">
-              <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
-              <g transform="translate(138)" fill="#CEE3E9">
-                <rect width="6" height="16" rx="3" />
-                <rect x="14" width="6" height="16" rx="3" />
-              </g>
-            </g>
-          </svg>
-        </div>
+      <svg
+        class="inline md:hidden my-8"
+        width="295"
+        height="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
+          <g transform="translate(138)" fill="#CEE3E9">
+            <rect width="6" height="16" rx="3" />
+            <rect x="14" width="6" height="16" rx="3" />
+          </g>
+        </g>
+      </svg>
 
-        <div class="hidden md:inline">
-          <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" fill-rule="evenodd">
-              <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
-              <g transform="translate(212)" fill="#CEE3E9">
-                <rect width="6" height="16" rx="3" />
-                <rect x="14" width="6" height="16" rx="3" />
-              </g>
-            </g>
-          </svg>
-        </div>
-      </div>
+      <svg
+        class="hidden md:inline my-8"
+        width="444"
+        height="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
+          <g transform="translate(212)" fill="#CEE3E9">
+            <rect width="6" height="16" rx="3" />
+            <rect x="14" width="6" height="16" rx="3" />
+          </g>
+        </g>
+      </svg>
 
       <!-- DICE -->
       <button
@@ -101,9 +100,9 @@ onMounted(() => {
         class="btn absolute -bottom-8 select-none group"
         aria-label="button"
       >
-        <div
+        <span
           class="absolute inset-0 w-16 h-16 bg-neonGreen rounded-full group-hover:blur-lg transition-all duration-300 ease-in-out"
-        ></div>
+        ></span>
         <div
           class="bg-neonGreen relative w-16 h-16 flex justify-center items-center rounded-full"
         >
@@ -120,11 +119,11 @@ onMounted(() => {
           </svg>
         </div>
       </button>
-    </div>
+    </main>
 
     <!-- ATTRIBUTION -->
     <div
-      class="absolute bottom-16 text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4"
+      class="text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4 mt-24 md:mt-36"
     >
       <div>
         Challenge by
