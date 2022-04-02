@@ -47,12 +47,11 @@ onMounted(() => {
       class="relative w-[375px] md:w-[33.75rem] h-auto bg-darkGrayishBlue rounded-[14px] flex flex-col items-center py-12 px-2 md:px-10 shadow-2xl transition-all duration-300 ease-in-out"
     >
       <!-- ADVICE ID -->
-      <p
+      <h1
         class="font-manrope font-bold text-neonGreen uppercase space-x-2 tracking-[0.24em] text-xs"
       >
-        <span>Advice</span>
-        <span>#{{ randomAdvice.adviceID }}</span>
-      </p>
+        Advice #{{ randomAdvice.adviceID }}
+      </h1>
 
       <!-- ADVICE -->
       <blockquote class="text-center mt-6">
@@ -100,6 +99,7 @@ onMounted(() => {
         class="btn absolute -bottom-8 select-none group"
         aria-label="button"
       >
+        <!-- NEON BLUR EFFECT -->
         <span
           class="absolute inset-0 w-16 h-16 bg-neonGreen rounded-full group-hover:blur-lg transition-all duration-300 ease-in-out"
         ></span>
@@ -125,7 +125,7 @@ onMounted(() => {
     <footer
       class="text-lightCyan font-manrope flex flex-col justify-center items-center space-y-4 mt-16"
     >
-      <div>
+      <span>
         Challenge by
         <a
           class="text-neonGreen"
@@ -133,8 +133,8 @@ onMounted(() => {
           target="_blank"
           >Frontend Mentor</a
         >.
-      </div>
-      <div>
+      </span>
+      <span>
         Coded by
         <a
           class="text-neonGreen"
@@ -142,7 +142,7 @@ onMounted(() => {
           target="_blank"
           >Monish</a
         >.
-      </div>
+      </span>
     </footer>
   </div>
 </template>
