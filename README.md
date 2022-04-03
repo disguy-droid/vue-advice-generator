@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [vue-advice-generator](https://vue-advice-generator.vercel.app)
+- Live Site URL: [vue-advice-generator](https://vadvicegenerator.vercel.app)
 
 ## My process
 

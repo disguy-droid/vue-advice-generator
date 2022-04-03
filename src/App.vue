@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, reactive, ref } from "vue";
+import { onMounted, reactive } from "vue";
 import axios from "axios";
 import anime from "animejs";
 
@@ -92,6 +92,7 @@ onMounted(() => {
           </g>
         </g>
       </svg>
+      <a href=""></a>
 
       <!-- DICE -->
       <button
