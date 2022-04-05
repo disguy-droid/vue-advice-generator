@@ -129,7 +129,7 @@ onMounted(() => {
       <span>
         Challenge by
         <a
-          aria-label="Frontend Mentor"
+          title="Frontend Mentor"
           class="text-neonGreen"
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
@@ -139,7 +139,7 @@ onMounted(() => {
       <span>
         Coded by
         <a
-          aria-label="@disguy-droid"
+          title="@disguy-droid"
           class="text-neonGreen"
           href="https://github.com/disguy-droid"
           target="_blank"
